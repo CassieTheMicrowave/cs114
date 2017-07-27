@@ -1,0 +1,5 @@
+print("please tell me what your name")
+myname = input()
+print("how old are you")
+myage = input()
+print("next year you will be " + str(int(myage) +1) + "in one year, have you pick your coffin")
