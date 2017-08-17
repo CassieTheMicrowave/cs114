@@ -2,11 +2,11 @@
 #then prints out the name of it in English.
 #45 fourty-five
 #11 eleven
-print ("If you give me a normal number between 1 and 99 I can wright it out")
+#print ("If you give me a normal number between 1 and 99 I can wright it out")
 #number = input()
-number = int(input())
+numbers = int(input('If you give me a normal number between 1 and 99 I can wright it out: '))
 
-tens = number // 10
+tens = numbers // 10
 ones = numbers % 10
 
 if tens == 9:
@@ -27,23 +27,45 @@ elif tens == 2:
     tens_word = 'twenty'
 elif tens == 1:
     tens_word = 'teen'
-elif one == 9:
-    one = 'nine'
-elif one == 8:
-    one = 'eight'
-elif one == 7:
-    one = 'seven'
-elif one == 6:
-    one = 'six'
-elif one == 5:
-    one = 'five'
-elif one == 4:
-    one = 'four'
-elif one == 3:
-    one = 'three'
-elif one== 2:
-    one = 'two'
-elif one == 1:
-    one = 'one'
 else:
-    print("Sorry cant do it.")
+    tens_word = ' '
+#return tens_word
+
+if ones == 9:
+    one_word = 'nine'
+elif ones == 8:
+    one_word = 'eight'
+elif ones == 7:
+    one_word = 'seven'
+elif ones == 6:
+    one_word = 'six'
+elif ones == 5:
+    one_word = 'five'
+elif ones == 4:
+    one_word = 'four'
+elif ones == 3:
+    one_word = 'three'
+elif ones == 2:
+    one_word = 'two'
+elif ones == 1:
+    one_word = 'one'
+else:
+    one_word = 'zero'
+
+
+
+if tens == 0:
+    output = one_word
+elif tens == 1:
+    if ones == 1:
+        output = 'eleven'
+    elif ones == 2:
+        output = 'twelve'
+    elif ones == 3:
+        output = 'thirteen'
+    else:
+        output = one_word + 'teen'
+else:
+    output = tens_word + '-' + one_word
+
+print(output)
